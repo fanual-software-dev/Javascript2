@@ -1,19 +1,11 @@
 // Question number 1
 
-const Given_year = 2012
-
-try { 
-
-    if(Given_year%4==0){
-        console.log(Given_year,' is a leap year.')
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+        return true; // Leap year
+    } else {
+        return false; // Not a leap year
     }
-
-    else{
-        throw new Error(' the given year is not leap year.')
-    }
-}
-catch(error){
-    console.log(error)
 }
 
 
